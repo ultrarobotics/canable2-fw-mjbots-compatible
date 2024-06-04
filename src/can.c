@@ -183,9 +183,9 @@ void can_set_data_bitrate(enum can_data_bitrate bitrate)
         case CAN_DATA_BITRATE_5M:
         default:
             bitrate_data.prescaler = 1;
-            bitrate_data.sjw = 6;
-            bitrate_data.time_seg1 = 24;
-            bitrate_data.time_seg2 = 7;
+            bitrate_data.sjw = 10;
+            bitrate_data.time_seg1 = 21;
+            bitrate_data.time_seg2 = 10;
             break;
     }
 
@@ -259,10 +259,10 @@ void can_set_bitrate(enum can_bitrate bitrate)
             bitrate_nominal.time_seg2 = 6;
             break;
         case CAN_BITRATE_1000K:
-            bitrate_nominal.prescaler = 2;
-            bitrate_nominal.sjw = 8;
-            bitrate_nominal.time_seg1 = 70;
-            bitrate_nominal.time_seg2 = 9;
+            bitrate_nominal.prescaler = 1;
+            bitrate_nominal.sjw = 16;
+            bitrate_nominal.time_seg1 = 106;
+            bitrate_nominal.time_seg2 = 53;
             break;
         default:
             break;
